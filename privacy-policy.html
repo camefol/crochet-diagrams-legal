@@ -56,6 +56,17 @@
             margin-top: 0;
             color: #1565c0;
         }
+        .privacy-summary {
+            background-color: #f0f7ff;
+            border: 2px solid #007AFF;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .privacy-summary h3 {
+            color: #007AFF;
+            margin-top: 0;
+        }
         ul, ol {
             padding-left: 20px;
         }
@@ -83,6 +94,13 @@
             color: #666;
             font-size: 14px;
         }
+        .highlight-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -102,6 +120,16 @@
         <div class="meta-info">
             <p><strong>Effective Date:</strong> January 27, 2025</p>
             <p><strong>Last Updated:</strong> January 27, 2025</p>
+            <p><strong>Version:</strong> 1.0.0</p>
+        </div>
+
+        <div class="privacy-summary">
+            <h3>📊 Privacy at a Glance</h3>
+            <p><strong>What we collect:</strong> Account info, patterns you create, app usage data</p>
+            <p><strong>Why we collect it:</strong> To provide app features, sync your data, improve the service</p>
+            <p><strong>Who we share with:</strong> Only service providers (Firebase, RevenueCat, Google Ads)</p>
+            <p><strong>Your control:</strong> Delete account anytime, opt-out of ads, export your data</p>
+            <p><strong>Data security:</strong> Encrypted storage, secure authentication, regular audits</p>
         </div>
 
         <h2>1. Introduction</h2>
@@ -124,6 +152,7 @@
             <li><strong>Account Information:</strong> Email address, username, and authentication credentials</li>
             <li><strong>Profile Information:</strong> Display name and preferences</li>
             <li><strong>User-Generated Content:</strong> Crochet patterns, diagrams, comments, and ratings</li>
+            <li><strong>Pattern Data:</strong> Hook sizes, stitch types, dimensions, yarn calculations</li>
             <li><strong>Communication:</strong> Messages, feedback, and support requests</li>
         </ul>
 
@@ -132,14 +161,34 @@
             <li><strong>Usage Data:</strong> App features used, session duration, and interaction patterns</li>
             <li><strong>Device Information:</strong> Device type, operating system version, and app version</li>
             <li><strong>Technical Data:</strong> IP address, device identifiers, and crash reports</li>
-            <li><strong>Location Data:</strong> General location (country/region) for compliance purposes</li>
+            <li><strong>Location Data:</strong> Country/region for compliance and content localization (no precise location)</li>
+            <li><strong>Performance Data:</strong> App load times, response times, error rates</li>
         </ul>
 
         <h3>2.3 Third-Party Information</h3>
         <ul>
             <li><strong>Authentication Providers:</strong> Google Sign-In and Apple Sign-In profile information</li>
             <li><strong>Analytics Providers:</strong> Usage statistics and performance metrics</li>
-            <li><strong>Advertising Partners:</strong> Ad interaction data and preferences</li>
+            <li><strong>Advertising Partners:</strong> Ad interaction data and advertising ID (with your consent)</li>
+            <li><strong>Payment Providers:</strong> Subscription status and purchase validation (no payment card details)</li>
+        </ul>
+
+        <h3>2.4 Biometric Data</h3>
+        <p>When you enable biometric authentication (Face ID/Touch ID on iOS, fingerprint on Android):</p>
+        <ul>
+            <li>Biometric data is processed locally on your device only</li>
+            <li>We never collect, store, or have access to your biometric information</li>
+            <li>Authentication tokens are stored securely in device keychain/keystore</li>
+            <li>You can disable biometric authentication at any time in app settings</li>
+        </ul>
+
+        <h3>2.5 Pattern and Diagram Specific Data</h3>
+        <p>When you create crochet patterns:</p>
+        <ul>
+            <li>Mathematical calculations are processed locally on your device</li>
+            <li>Patterns are encrypted before cloud storage</li>
+            <li>Shared patterns include your username unless made anonymous</li>
+            <li>Pattern generation count is tracked for free tier limits (3 patterns)</li>
         </ul>
 
         <h2>3. How We Use Your Information</h2>
@@ -148,15 +197,18 @@
         <ul>
             <li>Provide and maintain the App's functionality</li>
             <li>Create and manage your account</li>
-            <li>Save your crochet patterns and preferences</li>
+            <li>Save and sync your crochet patterns across devices</li>
+            <li>Generate diagrams based on your specifications</li>
             <li>Enable social features (comments, ratings, sharing)</li>
+            <li>Process mathematical calculations for pattern generation</li>
         </ul>
 
         <h3>3.2 Communication</h3>
         <ul>
             <li>Send important app updates and notifications</li>
             <li>Respond to your support requests and feedback</li>
-            <li>Provide customer service assistance</li>
+            <li>Notify you of changes to our policies</li>
+            <li>Send transactional emails (password resets, purchase confirmations)</li>
         </ul>
 
         <h3>3.3 Improvement and Analytics</h3>
@@ -164,13 +216,15 @@
             <li>Analyze usage patterns to improve the App</li>
             <li>Debug issues and optimize performance</li>
             <li>Develop new features based on user behavior</li>
+            <li>Monitor app stability and crash reports</li>
         </ul>
 
         <h3>3.4 Advertising and Marketing</h3>
         <ul>
-            <li>Display relevant advertisements (with your consent where required)</li>
+            <li>Display relevant advertisements (free tier only, with your consent)</li>
             <li>Personalize ad content based on your interests</li>
             <li>Measure advertising effectiveness</li>
+            <li>Provide rewarded ads for additional free patterns</li>
         </ul>
 
         <h3>3.5 Legal and Safety</h3>
@@ -178,6 +232,15 @@
             <li>Comply with legal obligations and regulations</li>
             <li>Protect against fraud, abuse, and security threats</li>
             <li>Enforce our Terms of Service</li>
+            <li>Protect intellectual property rights</li>
+        </ul>
+
+        <h3>3.6 Automated Decision Making</h3>
+        <p>We use automated systems only for:</p>
+        <ul>
+            <li>Enforcing usage limits (3 patterns for free tier, 20 for premium)</li>
+            <li>Detecting and preventing spam or abuse</li>
+            <li>No automated profiling is used for marketing or other purposes</li>
         </ul>
 
         <h2>4. Legal Basis for Processing (GDPR)</h2>
@@ -194,19 +257,61 @@
         <h3>5.1 Third-Party Service Providers</h3>
         <p>We share information with trusted service providers who help us operate the App:</p>
         <ul>
-            <li><strong>Firebase (Google):</strong> Authentication, database, and cloud functions</li>
-            <li><strong>Google Mobile Ads:</strong> Advertising services</li>
-            <li><strong>RevenueCat:</strong> Subscription management</li>
-            <li><strong>Analytics Providers:</strong> Usage and performance analytics</li>
+            <li><strong>Firebase (Google):</strong>
+                <ul>
+                    <li>Authentication: Stores user credentials and authentication tokens</li>
+                    <li>Firestore Database: Hosts user-generated patterns and preferences</li>
+                    <li>Cloud Storage: Stores video tutorials and pattern images</li>
+                    <li>Analytics: Collects anonymous usage patterns and performance metrics</li>
+                    <li>Crashlytics: Collects crash reports and error logs</li>
+                    <li>Cloud Functions: Processes server-side logic</li>
+                </ul>
+            </li>
+            <li><strong>Google Mobile Ads:</strong> 
+                <ul>
+                    <li>Displays advertisements to free tier users</li>
+                    <li>Uses Advertising ID for ad personalization (with consent)</li>
+                    <li>Collects ad interaction data</li>
+                </ul>
+            </li>
+            <li><strong>RevenueCat:</strong>
+                <ul>
+                    <li>Manages subscription status and entitlements</li>
+                    <li>Processes purchase validation</li>
+                    <li>Stores anonymized transaction data</li>
+                    <li>Never has access to payment card information</li>
+                </ul>
+            </li>
+            <li><strong>Google Play Services / Apple Services:</strong>
+                <ul>
+                    <li>Provides authentication services</li>
+                    <li>Processes in-app purchases</li>
+                    <li>Enables push notifications</li>
+                </ul>
+            </li>
         </ul>
 
-        <h3>5.2 Business Transfers</h3>
-        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred to the new entity.</p>
+        <h3>5.2 Data Sharing Practices</h3>
+        <p><strong>We do NOT:</strong></p>
+        <ul>
+            <li>Sell your personal data to third parties</li>
+            <li>Share data with third parties for their marketing purposes</li>
+            <li>Share your patterns without your explicit consent</li>
+        </ul>
+        <p><strong>Data shared with service providers is limited to:</strong></p>
+        <ul>
+            <li>Analytics providers: Anonymized usage data only</li>
+            <li>Payment processors: Transaction data required for purchases</li>
+            <li>Cloud services: Encrypted user content for storage</li>
+        </ul>
 
-        <h3>5.3 Legal Requirements</h3>
+        <h3>5.3 Business Transfers</h3>
+        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred to the new entity. We will notify you before any such transfer.</p>
+
+        <h3>5.4 Legal Requirements</h3>
         <p>We may disclose information when required by law, court order, or to protect our rights and safety.</p>
 
-        <h3>5.4 With Your Consent</h3>
+        <h3>5.5 With Your Consent</h3>
         <p>We may share information in other circumstances with your explicit consent.</p>
 
         <h2>6. Your Rights and Choices</h2>
@@ -216,6 +321,7 @@
             <li>View and update your profile information</li>
             <li>Download your data (data portability)</li>
             <li>Delete your account and associated data</li>
+            <li>Export your patterns in standard formats</li>
         </ul>
 
         <h3>6.2 Privacy Preferences</h3>
@@ -223,6 +329,7 @@
             <li>Manage consent for advertising and analytics</li>
             <li>Opt out of promotional communications</li>
             <li>Control push notification settings</li>
+            <li>Disable biometric authentication</li>
         </ul>
 
         <h3>6.3 Regional Rights</h3>
@@ -242,56 +349,107 @@
         <ul>
             <li>Right to know what personal information is collected</li>
             <li>Right to delete personal information</li>
-            <li>Right to opt-out of sale of personal information</li>
+            <li>Right to opt-out of sale of personal information (we don't sell data)</li>
             <li>Right to non-discrimination</li>
         </ul>
 
         <h2>7. Data Retention</h2>
         <p>We retain your information for as long as necessary to provide services and comply with legal obligations:</p>
         <ul>
-            <li><strong>Account Data:</strong> Until you delete your account</li>
-            <li><strong>Usage Analytics:</strong> Up to 2 years</li>
-            <li><strong>Support Communications:</strong> Up to 3 years</li>
+            <li><strong>Account Data:</strong> Deleted within 30 days of account closure</li>
+            <li><strong>User-Generated Patterns:</strong> Deleted with account unless shared publicly</li>
+            <li><strong>Usage Analytics:</strong> Anonymized after 90 days, deleted after 2 years</li>
+            <li><strong>Support Communications:</strong> Up to 3 years for quality assurance</li>
             <li><strong>Legal Requirements:</strong> As required by applicable law</li>
+            <li><strong>Backup Data:</strong> Deleted within 90 days of primary deletion</li>
         </ul>
 
         <h2>8. Data Security</h2>
         <p>We implement appropriate technical and organizational measures to protect your information:</p>
         <ul>
-            <li>Encryption in transit and at rest</li>
-            <li>Regular security assessments</li>
+            <li>Encryption in transit using TLS/SSL</li>
+            <li>Encryption at rest for sensitive data</li>
+            <li>Regular security assessments and updates</li>
             <li>Access controls and authentication</li>
             <li>Secure third-party integrations</li>
+            <li>Regular backups with encryption</li>
+            <li>Incident response procedures</li>
+        </ul>
+
+        <h3>8.1 Data Breach Notification</h3>
+        <p>In the event of a data breach that may affect your personal information:</p>
+        <ul>
+            <li>We will notify affected users within 72 hours of discovery</li>
+            <li>Notification will be via email and in-app message</li>
+            <li>We will provide information about the breach and steps to protect yourself</li>
+            <li>We will notify relevant authorities as required by law</li>
         </ul>
 
         <h2>9. International Data Transfers</h2>
         <p>Your information may be processed in countries outside your residence. We ensure adequate protection through:</p>
         <ul>
-            <li>Standard Contractual Clauses (SCCs)</li>
-            <li>Adequacy decisions</li>
-            <li>Other lawful transfer mechanisms</li>
+            <li>Standard Contractual Clauses (SCCs) with service providers</li>
+            <li>Adequacy decisions by relevant authorities</li>
+            <li>Firebase services comply with GDPR requirements</li>
+            <li>Data processing locations primarily in the United States and European Union</li>
         </ul>
 
         <h2>10. Children's Privacy</h2>
-        <p>The App is not intended for children under 13 (or 16 in the EU). We do not knowingly collect personal information from children. If we become aware of such collection, we will delete the information promptly.</p>
+        <p>The App is not intended for children under 13 (or 16 in the EU). We do not knowingly collect personal information from children. If we become aware of such collection, we will delete the information immediately. Parents who believe we have collected information from their child should contact us.</p>
 
         <h2>11. Advertising and Tracking</h2>
 
         <h3>11.1 Advertising</h3>
-        <p>We display ads through Google Mobile Ads. You can control ad personalization through:</p>
+        <p>We display ads through Google Mobile Ads (free tier only). You can control ad personalization through:</p>
         <ul>
             <li>App privacy settings</li>
-            <li>iOS App Tracking Transparency settings</li>
+            <li>iOS App Tracking Transparency (ATT) settings</li>
+            <li>Android Advertising ID settings</li>
             <li>Google Ad Settings</li>
         </ul>
 
-        <h3>11.2 Analytics</h3>
-        <p>We use analytics to understand app usage. You can opt out through app settings.</p>
+        <h3>11.2 App Tracking Transparency (iOS)</h3>
+        <p>For iOS 14.5+ users:</p>
+        <ul>
+            <li>We request permission to track via the ATT prompt</li>
+            <li>If you decline, we don't use IDFA for advertising</li>
+            <li>Core app functionality remains available regardless of choice</li>
+            <li>You can change this setting in iOS Settings > Privacy > Tracking</li>
+        </ul>
 
-        <h3>11.3 Cookies and Similar Technologies</h3>
-        <p>We may use cookies and similar technologies for authentication and preferences.</p>
+        <h3>11.3 Analytics</h3>
+        <p>We use Firebase Analytics to understand app usage. Data collected includes:</p>
+        <ul>
+            <li>Screen views and user flows</li>
+            <li>Feature usage statistics</li>
+            <li>Session duration and frequency</li>
+            <li>Anonymous demographic information</li>
+        </ul>
+        <p>You can opt out through app settings.</p>
 
-        <h2>12. Updates to This Policy</h2>
+        <h3>11.4 Cookies and Similar Technologies</h3>
+        <p>The mobile app doesn't use cookies. Web views within the app may use session storage for functionality.</p>
+
+        <h2>12. Video Content and Premium Features</h2>
+        <p>For premium subscribers with access to video tutorials:</p>
+        <ul>
+            <li>Video viewing progress is saved to enable resume functionality</li>
+            <li>Bandwidth usage is monitored for optimization</li>
+            <li>Content is delivered via secure CDN</li>
+            <li>Downloaded videos are encrypted on device</li>
+        </ul>
+
+        <h2>13. Community Features</h2>
+        <p>When you interact with community features:</p>
+        <ul>
+            <li>Comments are linked to your public profile</li>
+            <li>Ratings are aggregated anonymously</li>
+            <li>Shared patterns include attribution unless made anonymous</li>
+            <li>Blocking a user prevents mutual visibility of content</li>
+            <li>Moderators may review flagged content</li>
+        </ul>
+
+        <h2>14. Updates to This Policy</h2>
         <p>We may update this Privacy Policy periodically. We will notify you of material changes through:</p>
         <ul>
             <li>In-app notifications</li>
@@ -300,37 +458,56 @@
         </ul>
         <p>Continued use of the App after changes constitutes acceptance of the updated policy.</p>
 
-        <h2>13. Contact Us</h2>
+        <h3>14.1 Change Log</h3>
+        <ul>
+            <li>v1.0.0 (January 27, 2025): Initial release</li>
+        </ul>
+
+        <h2>15. Contact Us</h2>
         <p>If you have questions about this Privacy Policy or want to exercise your rights:</p>
         <div class="contact-info">
             <p><strong>Email:</strong> crochetdiagramsapp@gmail.com</p>
+            <p><strong>Response Time:</strong> Within 30 days</p>
             <p><strong>Address:</strong> Vojenska 27a, Levice, Slovakia</p>
             <p><strong>In-App:</strong> Use the "Contact Support" feature</p>
         </div>
         <p><strong>For EU/UK Users:</strong> If you're not satisfied with our response, you may lodge a complaint with your local data protection authority.</p>
 
-        <h2>14. Jurisdiction-Specific Information</h2>
+        <h2>16. Jurisdiction-Specific Information</h2>
 
-        <h3>14.1 European Union & United Kingdom</h3>
+        <h3>16.1 European Union & United Kingdom</h3>
         <p>This section applies to users in the EU and UK under GDPR and UK GDPR.</p>
         <ul>
             <li><strong>Data Controller:</strong> Individual Developer, Vojenska 27a, Levice, Slovakia</li>
             <li><strong>Legal Basis:</strong> As described in Section 4</li>
+            <li><strong>Supervisory Authority:</strong> Office for Personal Data Protection of the Slovak Republic</li>
         </ul>
 
-        <h3>14.2 California, United States</h3>
+        <h3>16.2 California, United States</h3>
         <p>This section applies to California residents under CCPA.</p>
         <ul>
             <li><strong>Categories of Information:</strong> As described in Section 2</li>
             <li><strong>Business Purpose:</strong> As described in Section 3</li>
             <li><strong>Sale of Information:</strong> We do not sell personal information</li>
+            <li><strong>Shine the Light:</strong> California residents may request information about disclosure to third parties</li>
         </ul>
 
-        <h3>14.3 Other Jurisdictions</h3>
-        <p>We comply with applicable privacy laws in all jurisdictions where we operate.</p>
+        <h3>16.3 Other Jurisdictions</h3>
+        <p>We comply with applicable privacy laws in all jurisdictions where we operate, including but not limited to:</p>
+        <ul>
+            <li>Canada (PIPEDA)</li>
+            <li>Australia (Privacy Act)</li>
+            <li>Brazil (LGPD)</li>
+            <li>Other applicable regional laws</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>Your Privacy Matters:</strong> We are committed to protecting your personal information and being transparent about our practices. If you have any concerns, please contact us.</p>
+        </div>
 
         <div class="version-info">
-            <p><strong>Last Updated:</strong> January 27, 2025 | <strong>Version:</strong> 1.0</p>
+            <p><strong>Last Updated:</strong> January 27, 2025 | <strong>Version:</strong> 1.0.0</p>
+            <p>© 2025 Crochet Diagrams. All rights reserved.</p>
         </div>
     </div>
 </body>
